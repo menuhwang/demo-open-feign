@@ -19,4 +19,7 @@ public interface DataStructureClient {
 
     @GetMapping(value = "/object/simple")
     User getObjectSimpleUser();
+
+    @GetMapping(value = "/arraylist/object/complex")
+    List<Object> getComplexObjectList();
 }

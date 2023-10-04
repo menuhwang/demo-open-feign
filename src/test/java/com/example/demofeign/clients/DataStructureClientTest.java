@@ -50,4 +50,13 @@ class DataStructureClientTest {
         assertInstanceOf(String.class, result.getName());
         assertInstanceOf(LocalDateTime.class, result.getCreatedDatetime());
     }
+
+    @Test
+    void getComplexObjectList() {
+        List<Object> result = dataStructureClient.getComplexObjectList();
+
+        log.info("get complex object list: {}", result);
+
+        assertEquals(3, result.size());
+    }
 }
