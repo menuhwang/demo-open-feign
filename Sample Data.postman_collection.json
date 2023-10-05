@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "1a08ee9a-a555-4345-9249-96e938e89aa6",
+		"name": "Sample Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18987663"
+	},
+	"item": [
+		{
+			"name": "get string arraylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/sample-data/arraylist/string"
+			},
+			"response": [
+				{
+					"name": "get arraylist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/sample-data/arraylist/string"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\"{{$randomCity}}\", \"{{$randomCity}}\", \"{{$randomCity}}\"]"
+				}
+			]
+		},
+		{
+			"name": "get int arraylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/sample-data/arraylist/int"
+			},
+			"response": [
+				{
+					"name": "get int arraylist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/sample-data/arraylist/int"
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[{{$randomInt}}, {{$randomInt}}, {{$randomInt}}]"
+				}
+			]
+		},
+		{
+			"name": "get simple object",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/sample-data/object/simple"
+			},
+			"response": [
+				{
+					"name": "get simple object",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/sample-data/object/simple"
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": {{$randomInt}},\n    \"name\": \"{{$randomUserName}}\",\n    \"createdDatetime\": \"{{$isoTimestamp}}\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get complex object arraylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/sample-data/arraylist/object/complex"
+			},
+			"response": [
+				{
+					"name": "get complex object arraylist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/sample-data/arraylist/object/complex"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n        {\n            \"type\": \"JPG\",\n            \"number\": {{$randomInt}}\n        },\n        {\n            \"type\": \"GIF\",\n            \"string\": \"{{$randomCity}}\"\n        },\n        {\n            \"type\": \"PNG\",\n            \"createdAt\": \"{{$isoTimestamp}}\",\n            \"array\": [\"{{$randomCity}}\", \"{{$randomCity}}\", \"{{$randomCity}}\"]\n        }\n    ]"
+				}
+			]
+		}
+	]
+}
