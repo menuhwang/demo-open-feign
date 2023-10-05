@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 @FeignClient(
-        name = "dataStructure",
-        url = "${feign.client.dataStructure.url}",
+        name = "sampleData",
+        url = "${feign.client.sampleData.url}",
         path = "/sample-data")
-public interface DataStructureClient {
+public interface SampleDataClient {
     @GetMapping(value = "/arraylist/string")
     List<String> getStringList();
 

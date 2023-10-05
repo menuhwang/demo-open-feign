@@ -1,6 +1,6 @@
 package com.example.demofeign.clients.response;
 
-import com.example.demofeign.clients.DataStructureClient;
+import com.example.demofeign.clients.SampleDataClient;
 import com.example.demofeign.config.FeignConfig;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -22,11 +22,11 @@ class CommonObjectMapperTest {
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     @Autowired
-    private DataStructureClient dataStructureClient;
+    private SampleDataClient sampleDataClient;
 
     @Test
     void mapToCommonObject() {
-        List<Object> objects = dataStructureClient.getComplexObjectList();
+        List<Object> objects = sampleDataClient.getComplexObjectList();
 
         List<CommonObject> commonObjects = objects.stream()
                 .map(CommonObjectMapper::mappedBy)

@@ -19,15 +19,15 @@ import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 @Import({
         FeignConfig.class
 })
-class DataStructureClientTest {
+class SampleDataClientTest {
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     @Autowired
-    private DataStructureClient dataStructureClient;
+    private SampleDataClient sampleDataClient;
 
     @Test
     void getStringList() {
-        List<String> result = dataStructureClient.getStringList();
+        List<String> result = sampleDataClient.getStringList();
 
         log.info("get string list: {}", result);
         assertEquals(3, result.size());
@@ -35,7 +35,7 @@ class DataStructureClientTest {
 
     @Test
     void getIntList() {
-        List<Integer> result = dataStructureClient.getIntList();
+        List<Integer> result = sampleDataClient.getIntList();
 
         log.info("get integer list: {}", result);
         assertEquals(3, result.size());
@@ -43,7 +43,7 @@ class DataStructureClientTest {
 
     @Test
     void getObjectSimpleUser() {
-        User result = dataStructureClient.getObjectSimpleUser();
+        User result = sampleDataClient.getObjectSimpleUser();
 
         log.info("get object simple-user: {}", result);
         assertInstanceOf(Integer.class, result.getId());
@@ -53,7 +53,7 @@ class DataStructureClientTest {
 
     @Test
     void getComplexObjectList() {
-        List<Object> result = dataStructureClient.getComplexObjectList();
+        List<Object> result = sampleDataClient.getComplexObjectList();
 
         log.info("get complex object list: {}", result);
 
