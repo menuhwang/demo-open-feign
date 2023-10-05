@@ -9,7 +9,7 @@ import java.util.List;
 @FeignClient(
         name = "dataStructure",
         url = "${feign.client.dataStructure.url}",
-        path = "/datastructure")
+        path = "/sample-data")
 public interface DataStructureClient {
     @GetMapping(value = "/arraylist/string")
     List<String> getStringList();
